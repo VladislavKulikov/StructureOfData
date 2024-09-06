@@ -53,19 +53,15 @@ class HashTable {
 
     return undefined;
   }
-
-  find(callback) {
-    for (let i = 0; i < this.size; i++) {
-      const bucket = this.table[i];
-      for (let j = 0; j < bucket.length; j++) {
-        const [key, value] = bucket[j];
-        if (callback(value, key)) return value;
-      }
-    }
-  }
 }
 
-const table = new HashTable(2);
+const table = new HashTable(8);
 table.set("1123123123", 1);
-table.set("asdasdas", 2);
-console.log(table.get("asdasdas"));
+table.set("asda3112312312332sdas", 2);
+table.set("1123123123asdasd", 3);
+table.set("asdasdaasdsads", 4);
+table.set("112312312asss3", 5);
+table.set("asdasdasaaa", 6);
+table.set("112312312asda3", 7);
+table.set("asdasdaasdasds", 9);
+console.log(table.get("asdasdaasdasds"));
